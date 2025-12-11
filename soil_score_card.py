@@ -11,7 +11,7 @@ import streamlit.components.v1 as components  # ✅ لطباعة الصفحة
 load_dotenv()
 
 # =============== OpenAI client ===============
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 st.set_page_config(page_title="Soil Health Score Card", layout="wide")
 
@@ -901,3 +901,4 @@ st.download_button(
     file_name="Silal_Soil_Health_Report.html",
     mime="text/html",
 )
+
